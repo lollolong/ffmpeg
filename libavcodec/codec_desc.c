@@ -3480,6 +3480,13 @@ static const AVCodecDescriptor codec_descriptors[] = {
         .long_name = NULL_IF_CONFIG_SMALL("G.728"),
         .props     = AV_CODEC_PROP_INTRA_ONLY | AV_CODEC_PROP_LOSSY,
     },
+    {
+        .id        = AV_CODEC_ID_DTSUHD,
+        .type      = AVMEDIA_TYPE_AUDIO,
+        .name      = "dtsuhd",
+        .long_name = NULL_IF_CONFIG_SMALL("DTSUHD (DTS-UHD Audio Format)"),
+        .props     = AV_CODEC_PROP_LOSSY,
+    },
 
     /* subtitle codecs */
     {

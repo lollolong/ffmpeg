@@ -197,6 +197,7 @@ OBJS-$(CONFIG_DSICIN_DEMUXER)            += dsicin.o
 OBJS-$(CONFIG_DSS_DEMUXER)               += dss.o
 OBJS-$(CONFIG_DTSHD_DEMUXER)             += dtshddec.o
 OBJS-$(CONFIG_DTS_DEMUXER)               += dtsdec.o rawdec.o
+OBJS-$(CONFIG_DTSUHD_DEMUXER)            += dtsuhddec.o
 OBJS-$(CONFIG_DTS_MUXER)                 += rawenc.o
 OBJS-$(CONFIG_DV_MUXER)                  += dvenc.o
 OBJS-$(CONFIG_DVBSUB_DEMUXER)            += dvbsub.o rawdec.o

@@ -48,7 +48,7 @@ typedef struct DTSHDDemuxContext {
 static int dtshd_probe(const AVProbeData *p)
 {
     if (AV_RB64(p->buf) == DTSHDHDR)
-        return AVPROBE_SCORE_MAX;
+        return AVPROBE_SCORE_MAX - 4; // DTSUHD (.dtsx) files also have this signature.
     return 0;
 }
 

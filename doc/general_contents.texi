@@ -635,6 +635,7 @@ library:
 @item raw DNxHD                 @tab X @tab X
 @item raw DTS                   @tab X @tab X
 @item raw DTS-HD                @tab   @tab X
+@item raw DTS-UHD               @tab   @tab
 @item raw E-AC-3                @tab X @tab X
 @item raw EVC                   @tab X @tab X
 @item raw FLAC                  @tab X @tab X

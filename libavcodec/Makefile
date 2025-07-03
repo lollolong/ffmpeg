@@ -1218,6 +1218,7 @@ OBJS-$(CONFIG_DNXHD_PARSER)            += dnxhd_parser.o dnxhddata.o
 OBJS-$(CONFIG_DNXUC_PARSER)            += dnxuc_parser.o
 OBJS-$(CONFIG_DOLBY_E_PARSER)          += dolby_e_parser.o dolby_e_parse.o
 OBJS-$(CONFIG_DPX_PARSER)              += dpx_parser.o
+OBJS-$(CONFIG_DTSUHD_PARSER)           += dtsuhd_parser.o dtsuhd_common.o
 OBJS-$(CONFIG_DVAUDIO_PARSER)          += dvaudio_parser.o
 OBJS-$(CONFIG_DVBSUB_PARSER)           += dvbsub_parser.o
 OBJS-$(CONFIG_DVD_NAV_PARSER)          += dvd_nav_parser.o
