@@ -24,6 +24,7 @@
  * Report DTS-UHD audio stream configuration and extract raw packet data.
  */
 
+#include "demux.h"
 #include "internal.h"
 #include "libavcodec/dtsuhd_common.h"
 #include "libavcodec/put_bits.h"
@@ -156,7 +157,7 @@ static int read_header(AVFormatContext *s)
 
     ffstream(st)->need_parsing = AVSTREAM_PARSE_FULL_RAW;
     st->codecpar->codec_type = AVMEDIA_TYPE_AUDIO;
-    st->codecpar->codec_id = s->iformat->raw_codec_id;
+    st->codecpar->codec_id = AV_CODEC_ID_DTS;
     st->codecpar->ch_layout.order = AV_CHANNEL_ORDER_NATIVE;
     st->codecpar->ch_layout.nb_channels = di.channel_count;
     st->codecpar->ch_layout.u.mask = di.ffmpeg_channel_mask;
@@ -201,15 +202,15 @@ static int read_packet(AVFormatContext *s, AVPacket *pkt)
     return ret;
 }
 
-AVInputFormat ff_dtsuhd_demuxer = {
-    .name           = "dtsuhd",
-    .long_name      = NULL_IF_CONFIG_SMALL("DTS-UHD"),
+FFInputFormat ff_dtsuhd_demuxer = {
+    .p.name         = "dtsuhd",
+    .p.long_name    = NULL_IF_CONFIG_SMALL("DTS-UHD"),
+    .p.flags        = AVFMT_GENERIC_INDEX,
+    .p.extensions   = "dtsx",
     .priv_data_size = sizeof(DTSUHDDemuxContext),
     .read_probe     = probe,
     .read_header    = read_header,
     .read_packet    = read_packet,
     .read_close     = read_close,
-    .flags          = AVFMT_GENERIC_INDEX,
-    .extensions     = "dtsx",
     .raw_codec_id   = AV_CODEC_ID_DTSUHD,
 };
