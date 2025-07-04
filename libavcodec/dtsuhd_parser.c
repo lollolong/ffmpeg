@@ -25,6 +25,7 @@
  */
 
 #include "dtsuhd_common.h"
+#include "libavutil/mem.h"
 #include "libavutil/intreadwrite.h"
 #include "parser.h"
 

@@ -29,6 +29,7 @@
 
 #include "dtsuhd_common.h"
 #include "get_bits.h"
+#include "libavutil/mem.h"
 #include "libavutil/channel_layout.h"
 
 #define DTSUHD_ALLOC_INCREMENT 16

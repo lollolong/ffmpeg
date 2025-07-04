@@ -27,6 +27,7 @@
 #include "internal.h"
 #include "libavcodec/dtsuhd_common.h"
 #include "libavcodec/put_bits.h"
+#include "libavutil/mem.h"
 #include "libavutil/intreadwrite.h"
 
 #define DTSUHD_BUFFER_SIZE (1024 * 1024)
